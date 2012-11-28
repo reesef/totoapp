@@ -4,6 +4,11 @@ gem 'rails', '3.2.8'
 gem 'bootstrap-sass'
 gem 'devise'
 
+# Postgres gem for heroku
+group :production do
+	gem 'pg' , '0.12.2'
+end
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
