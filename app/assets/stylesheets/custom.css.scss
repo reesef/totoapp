@@ -34,6 +34,7 @@ textarea {
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Sans', Sans-Serif;
   line-height: 1;
   color:$offwhite;
 }
@@ -55,6 +56,7 @@ h2 {
 }
 
 p {
+  font-family: arial;
   font-size: 1.1em;
   line-height: 1.7em;
 }
@@ -65,7 +67,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: black;
+  color: #4D4D4D;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
@@ -79,25 +81,18 @@ p {
 
 /* splash */
 
-.splash {
-  background-color: #DD6363;
-}
-
-.splash_hero{
-  font-family: 'PT Sans', Sans-Serif; 
+.splash_hero{ 
   width:560px;
   margin-left:155px;
   margin-right:155px;
   margin-top: 100px;
   margin-bottom:100px;
-  font-color:#f7f7f7;
 }
 
 .splash_link
   {
     color:#FFF9B3;
     text-decoration: none;
-
   }
 
   .splash_link:hover{
