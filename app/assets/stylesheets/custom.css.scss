@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans);
 $blue:#3bbfce;
 $salmon:#DD6363;
-$white:#f7f7f7;
+$offwhite:#f7f7f7;
 
 /* universal */
 
@@ -35,6 +35,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  color:$offwhite;
 }
 
 h1 {
@@ -104,6 +105,7 @@ p {
     color:black;
   }
 
-.splash_text{
+.about_text{
   color:#f7f7f7;
+  text-align: center;
 }
