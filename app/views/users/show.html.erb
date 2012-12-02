@@ -1,5 +1,7 @@
 <h1><%= @user.email %></h1>
 
-<p><%= @user.id %></p>
+<% @user.lists.each do |list| %>
 
-<p><%= @user.lists %></p>
+<h3><%= link_to list.name, list_path(list) %></h3>
+
+<% end %>
