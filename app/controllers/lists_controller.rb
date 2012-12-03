@@ -12,6 +12,7 @@ class ListsController < ApplicationController
 
 	def create
 		@list = List.new(params[:list])
+		@list.user_id = current_user.id
 		if @list.save
 			flash[:notice] = "List Created."
 			respond_with(@list, :location => list_path(@list))

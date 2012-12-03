@@ -1,4 +1,5 @@
 class List < ActiveRecord::Base
-  attr_accessible :name, :user_id
+  attr_accessible :name
+  validates_presence_of :user_id
   belongs_to :user
 end
