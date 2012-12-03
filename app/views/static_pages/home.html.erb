@@ -1,10 +1,11 @@
 <body class="splash">
-	<div class="span9" >
-			<div class="splash_hero" >
+	<div class="span10" >
+			<span class="splash_hero" >
 			<%= image_tag ("toto-text.png") %>
-			</div>
+			</span>
 
-	<%= link_to "Sign up", new_user_registration_path , 
-                               class: "btn btn-large btn-primary" %>
+			<div><%= link_to "Sign up", new_user_registration_path , 
+                               class: "btn btn-large btn_home" %>
+            </div>
 	</div>
 </body>
