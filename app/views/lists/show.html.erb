@@ -1,4 +1,15 @@
 <h1><%= @list.name %></h1>
 
+<ul>
+<% @list.tasks.each do |task| %>
+<li><%= task.description %></li>
+<% end %>
+</ul>
+
+<%= form_for [@list, @list.tasks.new] do |form| %>
+<p><%= form.text_field :description %> <%= form.submit %></p>
+<% end %>
+
+
 <hr />
 <%= link_to "All lists", lists_path %>

@@ -1,8 +1,10 @@
 Omrails::Application.routes.draw do
 
-  resources :tasks
+  
 
-  resources :lists
+  resources :lists do
+    resources :tasks
+  end
 
   devise_for :users
 
