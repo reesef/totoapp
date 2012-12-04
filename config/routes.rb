@@ -1,12 +1,13 @@
 Omrails::Application.routes.draw do
 
+  resources :tasks
+
   resources :lists
 
   devise_for :users
 
   root :to => 'static_pages#home'
   get "about" => "static_pages#about"
-  match '/users/:id' => 'users#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
