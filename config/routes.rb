@@ -6,6 +6,8 @@ Omrails::Application.routes.draw do
     resources :tasks
   end
 
+  match 'lists/:list_id/tasks/:id/complete' => 'tasks#complete', :as => :complete_task
+
   devise_for :users
 
   root :to => 'static_pages#home'
