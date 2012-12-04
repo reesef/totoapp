@@ -6,6 +6,7 @@ class ListsController < ApplicationController
 	
 	def index
 		@lists = current_user.lists
+		@list = List.new
 	end
 
 	def new
