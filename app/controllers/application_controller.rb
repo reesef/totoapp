@@ -5,9 +5,6 @@ class ApplicationController < ActionController::Base
    		lists_path                                                                                     
     end            
 
-
-
-
 end
 
 
