@@ -1,9 +1,11 @@
-<%= form_for @list do |form| %>
-
-<label>Name:
-		<p><%= form.text_field :name, :autocomplete => :off  %></p>
-</label>
-
-<p><%= form.submit %></p>
+<div class="row collapse">	
+<div class="ten mobile-three columns">
+		<%= form_for @list do |form| %>
+		<%= form.text_field :name, :autocomplete => :off  %>
+</div>
+<div class="two mobile-one columns">
+<%= form.submit "Create List" , :class => 'button expand postfix' %>
+</div>
 
 <% end %>
+</div>
