@@ -1,19 +1,18 @@
 <div class="row">
-	<div class="twelve columns"><h1 class="lists_title">My Lists</h1></div>
+	<div class="twelve mobile-four columns"><h1 class="page_title">My Lists</h1></div>
 </div>
 
-<div class="row">
+<div class="row collapse">
 	<% @lists.each do |list| %>
-	<div class="ten columns">
+	<div class="ten mobile-three columns">
 		<h3><%= link_to list.name, list_path(list) %></h3>
 	</div>
-	<div class="two columns">
+	<div class="two mobile-one columns">
 		<ul class="inline-list right">
 		<li><%= link_to "Edit", edit_list_path(list) %></li>
-		<li><%= link_to "x", list_path(list), :method => :delete %></li>
+		<li><%= link_to "X", list_path(list), :method => :delete %></li>
 	</ul>
 	</div>
 <% end %>
 </div>
-<hr/>
 <%= render :partial => 'form' %>
