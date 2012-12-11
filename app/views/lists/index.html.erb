@@ -2,7 +2,7 @@
 	<div class="twelve mobile-four columns"><h1 class="page_title">My Lists</h1></div>
 </div>
 
-<div class="row collapse">
+<div class="row">
 	<% @lists.each do |list| %>
 	<div class="ten mobile-three columns">
 		<h3><%= link_to list.name, list_path(list) %></h3>
@@ -11,7 +11,7 @@
 		<ul class="inline-list right">
 		<li><%= link_to "Edit", edit_list_path(list) %></li>
 		<li><%= link_to "X", list_path(list), :method => :delete %></li>
-	</ul>
+		</ul>
 	</div>
 <% end %>
 </div>
