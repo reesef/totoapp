@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>toto app!</title>
+<head>
+      <title>Toto App</title>
       <%= stylesheet_link_tag    "application", :media => "all" %>
       <%= javascript_include_tag "application" %>
       <%= csrf_meta_tags %>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </head>
-    <body>
-      <header>
+</head>
+  <body>
+    <header>
       <nav class="top-bar">
-        <ul>
-          <li class="name"><%= link_to image_tag("logo.png" , :size => "45x70") , root_path %></li>
-          <li class="toggle-topbar"><a href="#"></a></li>
-        </ul>
+          <ul>
+            <li class="name"><h1><%= link_to image_tag("logo.png" , :size => "45x70") , root_path %></h1></li>
+            <li class="toggle-topbar"><a href="#"></a></li>
+          </ul>
         <section>
-        <ul class="right">
+          <ul class="right">
             <% if user_signed_in? %>
             <li><%= link_to "My Lists", lists_path %></li>
             <li><%= link_to "Settings", edit_user_registration_path %></li>
@@ -24,10 +24,10 @@
             <li><%= link_to "About", about_path %></a></li>
             <li><%= link_to "Sign In", new_user_session_path, :method => :get %></li>
             <% end %>
-        </ul>
+          </ul>
         </section>
       </nav>
-      </header>
+    </header>
         <% flash.each do |key, value| %>
         <div class="row">
         <div class="twelve columns centered alert-box" >
