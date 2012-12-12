@@ -12,7 +12,8 @@
   		<li class="active" id="simple1Tab">
   			<ul>
 				<% @list.tasks.incomplete.each do |task| %>
-				<li><%= task.description %> - <%= button_to "Complete", complete_task_path(@list.id,task.id) %>
+				<div class="ten mobile-three columns"><li><%= task.description %></div> 
+					<div class="two mobile-one columns"><%= button_to "Complete", complete_task_path(@list.id,task.id) %></div>
 				</li>
 				<% end %>
 			</ul>
@@ -20,16 +21,23 @@
  		 <li id="simple2Tab">
   			<ul>
 				<% @list.tasks.completed.each do |task| %>
-				<li><%= task.description %></li>
+				<div class="twelve mobile-four columns"><li><%= task.description %></li></div>
 				<% end %>
 			</ul>
   		</li>
   	</ul>
 </div>
+<div class="row collapse">
+	<div class="ten mobile-three columns">
+		<%= form_for [@list, @list.tasks.new] do |form| %>
+		<%= form.text_field :description %> 
+	</div>
+	<div class="two mobile-one columns">
+		<%= form.submit "Create Task" , :class => 'button expand postfix' %>
+		<% end %>
+	</div>
+</div>
 <div class="row">
-	<%= form_for [@list, @list.tasks.new] do |form| %>
-	<p><%= form.text_field :description %> <%= form.submit %></p>
-	<% end %>
-<hr />
-	<%= link_to "All lists", lists_path %>
+<hr>
+<%= link_to "All lists", lists_path %>
 </div>
