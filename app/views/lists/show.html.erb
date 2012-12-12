@@ -10,16 +10,16 @@
 	</dl>
 	<ul class="tabs-content">
   		<li class="active" id="simple1Tab">
-  			<ul>
+  			<ul class="no_decoration">
 				<% @list.tasks.incomplete.each do |task| %>
 				<div class="ten mobile-three columns"><li><%= task.description %></div> 
-					<div class="two mobile-one columns"><%= button_to "Complete", complete_task_path(@list.id,task.id) %></div>
+					<div class="two mobile-one columns"><%= button_to "Complete", complete_task_path(@list.id,task.id), :class => 'small button' %></div>
 				</li>
 				<% end %>
 			</ul>
   		</li>
  		 <li id="simple2Tab">
-  			<ul>
+  			<ul class="no_decoration">
 				<% @list.tasks.completed.each do |task| %>
 				<div class="twelve mobile-four columns"><li><%= task.description %></li></div>
 				<% end %>
