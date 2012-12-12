@@ -1,23 +1,35 @@
-<h1><%= @list.name %></h1>
-
-<h3>Stuff to do</h3>
-<ul>
-<% @list.tasks.incomplete.each do |task| %>
-<li><%= task.description %> - <%= button_to "Complete", complete_task_path(@list.id,task.id) %></li>
-<% end %>
-</ul>
-
-<h3>Stuff I've done</h3>
-<ul>
-<% @list.tasks.completed.each do |task| %>
-<li><%= task.description %></li>
-<% end %>
-</ul>
-
-<%= form_for [@list, @list.tasks.new] do |form| %>
-<p><%= form.text_field :description %> <%= form.submit %></p>
-<% end %>
-
-
+<div class="row">
+	<div class="twelve mobile-four columns">
+		<h1 class="page_title"><%= @list.name %></h1>
+	</div>
+</div>
+<div class="row">
+	<dl class="tabs">
+  		<dd class="active"><a href="#simple1">To do</a></dd>
+  		<dd><a href="#simple2">Done</a></dd>
+	</dl>
+	<ul class="tabs-content">
+  		<li class="active" id="simple1Tab">
+  			<ul>
+				<% @list.tasks.incomplete.each do |task| %>
+				<li><%= task.description %> - <%= button_to "Complete", complete_task_path(@list.id,task.id) %>
+				</li>
+				<% end %>
+			</ul>
+  		</li>
+ 		 <li id="simple2Tab">
+  			<ul>
+				<% @list.tasks.completed.each do |task| %>
+				<li><%= task.description %></li>
+				<% end %>
+			</ul>
+  		</li>
+  	</ul>
+</div>
+<div class="row">
+	<%= form_for [@list, @list.tasks.new] do |form| %>
+	<p><%= form.text_field :description %> <%= form.submit %></p>
+	<% end %>
 <hr />
-<%= link_to "All lists", lists_path %>
+	<%= link_to "All lists", lists_path %>
+</div>
