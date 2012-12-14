@@ -5,7 +5,7 @@
 </div>
 <br>
 <div class="row">
-	<div class="twelve mobile-four columns centered">
+	<div class="six mobile-four columns centered">
 		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   		<%= devise_error_messages! %>
   		<%= f.label :email %><%= f.email_field :email %>
@@ -14,14 +14,14 @@
 
 
 <div class="row">
-	<div class="twelve mobile-four columns centered">
+	<div class="six mobile-four columns centered">
 		<%= f.label :password %>
   		<%= f.password_field :password %>
   	</div>
 </div>
 
 <div class="row">  
-  	<div class="twelve mobile-four columns centered">	
+  	<div class="six mobile-four columns centered">	
   		<%= f.label :password_confirmation %>
  		<%= f.password_field :password_confirmation %>
   	</div>
@@ -29,13 +29,12 @@
 
 
 <div class="row">
-  	<div class="twelve mobile-four columns centered">
+  	<div class="six mobile-one columns centered">
   	<%= f.submit "Sign up" , :class => 'button medium' %>
+  	<% end %>
   	</div>
+  	<div class="mobile-two"></div>
 </div>
-
-<% end %>
-
 <br>
 <div class="row">
 	<div class="six mobile-four columns centered">
