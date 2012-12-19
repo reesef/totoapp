@@ -1,14 +1,11 @@
-<body class="splash">
-	<div class="span10" >
-		<br>
-		<br>
-		<br>
-			<span class="splash_hero" >
-			<%= image_tag ("toto-text.png") %>
-			</span>
-
-			<div class="span3 offset5"><%= link_to "Sign up for Alpha", new_user_registration_path , 
-                               class: "btn btn-large btn_home" %>
-            </div>
+<body>
+	<div class="row">
+		<div class="five columns pad30">
+			<h2>Friendly and fun <em>todo lists</em> for dog lovers</h2>
+				<%= link_to "Sign up Free", new_user_registration_path , class: "button large" %>
+        </div>
+		<div class="seven columns">
+			<%= image_tag ("toto_home.png") %>
+		</div>
 	</div>
 </body>
