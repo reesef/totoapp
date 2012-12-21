@@ -18,6 +18,22 @@ class TasksController < ApplicationController
 		end
 	end
 
+	def edit
+		@list = List.find(params[:list_id])
+		@task = Task.find(params[:id])
+	end
+
+	def update
+		@list = List.find(params[:list_id])
+		@task = Task.find(params[:id])
+		if @task.update_attributes(params[:task])
+		flash[:notice] = "Task updated."
+		respond_with(@list, :location => list_path(@list))
+		else flash[:error] = "Could not update list."
+		redirect_to edit_list_task_path
+		end
+	end
+
 	def complete
 		@list = List.find(params[:list_id])
 		@task = @list.tasks.find(params[:id])

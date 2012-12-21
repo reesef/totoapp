@@ -1,0 +1,16 @@
+<h1>Edit task</h1>
+
+<div class="row">
+	<div class="twelve mobile-four columns"><h1 class="page_title">Edit task</h1></div>
+</div>
+
+<div class="row collapse">
+	<div class="ten mobile-three columns">
+		<%= form_for [@list, @list.tasks.new] do |form| %>
+		<%= form.text_field :description %> 
+	</div>
+	<div class="two mobile-one columns">
+		<%= form.submit "Update Task" , :class => 'button expand postfix' %>
+		<% end %>
+	</div>
+</div>
