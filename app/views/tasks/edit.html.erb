@@ -1,12 +1,10 @@
-<h1>Edit task</h1>
-
 <div class="row">
 	<div class="twelve mobile-four columns"><h1 class="page_title">Edit task</h1></div>
 </div>
 
 <div class="row collapse">
 	<div class="ten mobile-three columns">
-		<%= form_for [@list, @list.tasks.new] do |form| %>
+		<%= form_for @task.edit do |form| %>
 		<%= form.text_field :description %> 
 	</div>
 	<div class="two mobile-one columns">
