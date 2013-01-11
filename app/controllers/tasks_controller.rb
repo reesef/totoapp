@@ -19,12 +19,10 @@ class TasksController < ApplicationController
 	end
 
 	def edit
-		@list = List.find(params[:list_id])
 		@task = Task.find(params[:id])
 	end
 
 	def update
-		@list = List.find(params[:list_id])
 		@task = Task.find(params[:id])
 		if @task.update_attributes(params[:task])
 		flash[:notice] = "Task updated."

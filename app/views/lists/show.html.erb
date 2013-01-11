@@ -13,7 +13,7 @@
   			<ul class="no_decoration">
 				<% @list.tasks.incomplete.each do |task| %>
 				<div class="ten mobile-three columns"><li><%= task.description %></div> 
-					<div class="two mobile-one columns"><%= button_to "Complete", complete_task_path(@list.id,task.id), :class => 'small button' %><%= link_to "Edit", edit_list_task_path(@list.id,task.id) %></div>
+					<div class="two mobile-one columns"><%= button_to "Complete", complete_task_path(@list.id,task.id), :class => 'small button' %></div>
 				</li>
 				<% end %>
 			</ul>
